@@ -3,12 +3,13 @@ import Nav from "./Nav";
 import Article from "./Article";
 import ArticleEntry from "./ArticleEntry";
 import { SignIn, SignOut, useAuthentication } from "../services/authService";
+import { auth } from "../firebaseConfig";
 import {
   fetchArticles,
   createArticle,
   deleteArticle,
 } from "../services/articleService";
-import "./App.css";
+import  './App.css';
 
 export default function App() {
   const [articles, setArticles] = useState([]);
@@ -47,9 +48,11 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        Blog
-        {user && <button onClick={() => setWriting(true)}>New Article</button>}
-        {!user ? <SignIn /> : <SignOut />}
+        {user && <button className="NewArticle" onClick={() => setWriting(true)}>New Article</button>}
+        {user && <h1 className="title">{auth.currentUser.displayName}'s Blog</h1>} 
+        <div>
+          {!user ? <SignIn /> : <SignOut />}
+        </div>
       </header>
 
       {!user ? "" : <Nav articles={articles} setArticle={setArticle} />}

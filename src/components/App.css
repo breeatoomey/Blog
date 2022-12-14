@@ -1,58 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;1,300&display=swap');
+
 .App {
-  display: grid;
-  grid-template-rows: min-content auto;
-  grid-template-columns: 250px auto;
-  height: 100vh;
-  overflow: scroll;
-}
+    display: grid;
+    grid-template-rows: min-content auto;
+    grid-template-columns: 250px auto;
+    height: 100vh;
+    overflow: scroll;
+    background: rgb(165,201,202);
+    background: linear-gradient(180deg, rgba(165,201,202,1) 0%, rgba(231,246,242,1) 100%);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2C3333;
+    color: white;
+    grid-column: 1 / span 2;
+    padding: 10px 5px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #2C3333;
+  }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: black;
-  color: white;
-  grid-column: 1 / span 2;
-  padding: 10px 5px;
-}
+  .title {
+    font-size: 40px;
+    font-weight: bold;
+    justify-self: center;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Exo 2';
+    font-weight: 400;
+  }
 
-form {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+  .NewArticle {
+    justify-self: left;
+    margin-left: 40px;
+    border: 2px solid #43656D;
+    background-color: #CAE3E0;
+    color: #2B3333;
+    padding: 7px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 4px;
+    transition-duration: 0.3s;
+    font-family: 'Exo 2';
+    font-weight: 400;
+  }
 
-form input,
-form textarea {
-  margin-bottom: 10px;
-  width: 300px;
-}
+  .NewArticle:hover {
+    background-color: #43656D;
+    color: white;
+  }
 
-nav,
-article {
-  height: 100%;
-  padding: 10px;
-}
+  .SignOut {
+    border: 2px solid #43656D;
+    background-color: #CAE3E0;
+    color: #2B3333;
+    padding: 7px;
+    border-radius: 4px;
+    margin-right: auto;
+    transition-duration: 0.3s;
+    margin-right: 40px;
+    font-family: 'Exo 2';
+    font-weight: 400;
+    padding: 12px;
+  }
 
-nav {
-  background-color: #dee9ff;
-}
+  .SignOut:hover {
+    background-color: #43656D;
+    color: white;
+  }
 
-nav p:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
+  .SignIn {
+    border: 2px solid #43656D;
+    background-color: #CAE3E0;
+    color: #2B3333;
+    padding: 7px;
+    border-radius: 4px;
+    margin-right: auto;
+    transition-duration: 0.3s;
+    margin-right: 40px;
+    font-family: 'Exo 2';
+    font-weight: 400;
+    padding: 12px;
+  }
 
-article .date {
-  font-style: italic;
-}
+  .SignIn:hover {
+    background-color: #43656D;
+    color: white;
+  }
 
-article .body {
-  white-space: break-spaces;
-}
+  
+  form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  form input,
+  form textarea {
+    margin-bottom: 10px;
+    width: 300px;
+  }
+  
+  nav,
+  article {
+    height: 100%;
+    padding: 10px;
+  }
+  
+  nav {
+    background: rgb(57,91,100);
+    background: linear-gradient(180deg, rgba(57,91,100,1) 31%, rgba(165,201,202,1) 100%);
+    border-radius: 40px;
+    margin: 10px;
+    margin-top: 2px;
+    box-shadow: 0 0 10px #2C3333;
+  }
 
-.error {
-  background-color: red;
-  color: gold;
-  padding: 5px;
-}
+  nav p {
+    color: #E6F5F1;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  nav p:hover {
+    border-color: #2B3333;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+  
+  article .date {
+    font-family: 'Exo 2';
+    font-style: italic;
+  }
+  
+  article .body {
+    white-space: break-spaces;
+    font-family: 'Exo 2';
+  }
+
+  article {
+    font-family: 'Exo 2';
+    color: #1f2424;
+  }
+  
+  .error {
+    background-color: red;
+    color: gold;
+    padding: 5px;
+  }
