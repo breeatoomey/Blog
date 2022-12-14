@@ -1,7 +1,9 @@
-# A Blog Starter App
+# Simple Blog Application
 
-This is a trivial blog app, started with create-react-app.
+This is a simple blog application that allows users to sign in through Google and make blog posts that include a title, a body, and a timestamp. Blog content is hosted via Firestore and users are authenticated via Firebase Auth. 
 
-It works entirely within memory, so reloads blow everything away except for the first two mock articles.
+**Created By:**
+Breea Toomey
 
-This repo is designed for you to fork and extend with (1) better CSS and (2) a real back end, with authentication and a database.
+**Live Link:**
+https://blog-fe842.web.app/
